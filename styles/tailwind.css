@@ -1,0 +1,4 @@
+/* Tailwind is loaded via CDN; this file adds project-specific overrides */
+html {
+  scroll-behavior: smooth;
+}
