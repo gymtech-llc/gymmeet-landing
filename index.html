@@ -1,81 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GymMeet Pro — Coming Soon</title>
-  <style>
-    :root {
-      --primary-bg: linear-gradient(135deg, #8622FF, #446AFF);
-      --heading-color: #fff;
-      --text-color: #eee;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--primary-bg);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      text-align: center;
-    }
-
-    .container {
-      padding: 2rem;
-      max-width: 600px;
-    }
-
-    .logo {
-      width: 50%;
-      max-width: 240px;
-      height: auto;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: var(--heading-color);
-      margin-bottom: 0.75rem;
-    }
-
-    p {
-      font-size: 1.25rem;
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 1rem;
-      width: 100%;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.4);
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .logo {
-        width: 60%;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymMeet Pro</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 </head>
-<body>
-  <div class="container">
-    <img src="gymmeet-silhouette.svg" alt="GymMeet Pro Logo" class="logo" />
-    <h1>GymMeet Pro</h1>
-    <p>The modern platform for managing gymnastics meets — built for directors, coaches, and parents. Launching soon.</p>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <nav class="fixed top-4 right-4 z-50">
+    <ul class="bg-white/70 backdrop-blur rounded-lg shadow-md px-4 py-2 space-y-1 text-sm">
+      <li><a href="#login" class="block hover:underline">Login &amp; Onboarding</a></li>
+      <li><a href="#dashboard" class="block hover:underline">Parent Dashboard</a></li>
+      <li><a href="#visibility" class="block hover:underline">Meet Visibility</a></li>
+      <li><a href="#registration" class="block hover:underline">Registration</a></li>
+      <li><a href="#billing" class="block hover:underline">Billing</a></li>
+      <li><a href="#notifications" class="block hover:underline">Notifications</a></li>
+      <li><a href="#ai" class="block hover:underline">AI Assistant</a></li>
+      <li><a href="#admin" class="block hover:underline">Admin Tools</a></li>
+      <li><a href="#mobile" class="block hover:underline">Mobile Experience</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Swiper -->
+  <div class="swiper hero h-screen w-full">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide flex items-center justify-center relative">
+        <img src="screenshots/hero/parent_landing.png" alt="Parent dashboard" class="object-contain h-full w-full" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <p class="text-white text-3xl md:text-5xl font-semibold bg-black/40 backdrop-blur-sm p-6 rounded">Intuitive parent dashboard with quick access to upcoming meets</p>
+        </div>
+      </div>
+      <div class="swiper-slide flex items-center justify-center relative">
+        <img src="screenshots/hero/athlete_registration_details.png" alt="Athlete registration" class="object-contain h-full w-full" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <p class="text-white text-3xl md:text-5xl font-semibold bg-black/40 backdrop-blur-sm p-6 rounded">Track athlete registration history and meet eligibility</p>
+        </div>
+      </div>
+      <div class="swiper-slide flex items-center justify-center relative">
+        <img src="screenshots/hero/meet_calendar.png" alt="Meet calendar" class="object-contain h-full w-full" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <p class="text-white text-3xl md:text-5xl font-semibold bg-black/40 backdrop-blur-sm p-6 rounded">Plan ahead with a detailed monthly meet calendar</p>
+        </div>
+      </div>
+      <div class="swiper-slide flex items-center justify-center relative">
+        <img src="screenshots/hero/meet_details.png" alt="Meet details" class="object-contain h-full w-full" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <p class="text-white text-3xl md:text-5xl font-semibold bg-black/40 backdrop-blur-sm p-6 rounded">Get full meet details including deadlines, fees, and location</p>
+        </div>
+      </div>
+      <div class="swiper-slide flex items-center justify-center relative">
+        <img src="screenshots/hero/queue_monitor.png" alt="Queue monitor" class="object-contain h-full w-full" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <p class="text-white text-3xl md:text-5xl font-semibold bg-black/40 backdrop-blur-sm p-6 rounded">Monitor your notification queue and message delivery stats</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <footer>© 2025 Gymnastics Technology Partners LLC</footer>
+
+  <!-- Sections -->
+  <section id="login" class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Login &amp; Onboarding</h2>
+        <p>Simple onboarding for parents and athletes with streamlined login and registration flows.</p>
+      </div>
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src="screenshots/login_page.png" alt="Login page" class="rounded shadow">
+        <img src="screenshots/parent_registration.png" alt="Parent registration" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard" class="py-16 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row-reverse items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Parent Dashboard</h2>
+        <p>All your athletes, meets, and communications in one intuitive dashboard.</p>
+      </div>
+      <div class="md:w-1/2">
+        <img src="screenshots/parent_landing.png" alt="Parent dashboard" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="visibility" class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Meet Visibility</h2>
+        <p>Discover available meets and dive into details before committing.</p>
+      </div>
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src="screenshots/available_meets.png" alt="Available meets" class="rounded shadow">
+        <img src="screenshots/meet_details.png" alt="Meet details" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="registration" class="py-16 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row-reverse items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Registration</h2>
+        <p>Register athletes for meets with historical tracking and roster management.</p>
+      </div>
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src="screenshots/meet_roster_august_invite.png" alt="Meet roster" class="rounded shadow">
+        <img src="screenshots/athlete_registration_details.png" alt="Athlete registration details" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="billing" class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Billing</h2>
+        <p>Generate invoices and track payments effortlessly.</p>
+      </div>
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <img src="screenshots/billing_detail.png" alt="Billing detail" class="rounded shadow">
+        <img src="screenshots/billing_generate_invoice.png" alt="Generate invoice" class="rounded shadow">
+        <img src="screenshots/billing_invoice.png" alt="Invoice" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="notifications" class="py-16 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row-reverse items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Notifications</h2>
+        <p>Flexible preferences and powerful queue monitoring keep everyone informed.</p>
+      </div>
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src="screenshots/notification_preferences_desktop.png" alt="Notification preferences desktop" class="rounded shadow">
+        <img src="screenshots/notification_preferences_mobile.png" alt="Notification preferences mobile" class="rounded shadow">
+        <img src="screenshots/notification_template_preview.png" alt="Template preview" class="rounded shadow">
+        <img src="screenshots/user_notification_preferences.png" alt="User notification preferences" class="rounded shadow">
+        <img src="screenshots/queue_monitor.png" alt="Queue monitor" class="rounded shadow sm:col-span-2">
+      </div>
+    </div>
+  </section>
+
+  <section id="ai" class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">AI Assistant</h2>
+        <p>Get instant answers and suggestions with the built-in AI assistant.</p>
+      </div>
+      <div class="md:w-1/2">
+        <img src="screenshots/ai_assistant_mobile.png" alt="AI assistant mobile" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="admin" class="py-16 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row-reverse items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Admin Tools</h2>
+        <p>Powerful tools for administrators to manage users and settings.</p>
+      </div>
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src="screenshots/admin_dashboard.png" alt="Admin dashboard" class="rounded shadow">
+        <img src="screenshots/user_prefs_admin.png" alt="User preferences admin" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="mobile" class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Mobile Experience</h2>
+        <p>Designed to work seamlessly on phones and tablets.</p>
+      </div>
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src="screenshots/landing_mobile.png" alt="Landing mobile" class="rounded shadow">
+        <img src="screenshots/notification_preferences_mobile.png" alt="Notification preferences mobile" class="rounded shadow">
+        <img src="screenshots/meet_details_mobile.png" alt="Meet details mobile" class="rounded shadow">
+        <img src="screenshots/ai_assistant_mobile.png" alt="AI assistant mobile" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-sm py-8 bg-gray-100">
+    © 2025 Gymnastics Technology Partners LLC
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/init.js"></script>
 </body>
 </html>
