@@ -148,7 +148,7 @@ gsap.from('.panel-ai .text', {
 });
 
 // Final CTA
- gsap.from('.panel-cta .inner', {
+gsap.from('.panel-cta .inner', {
   opacity: 0,
   y: 50,
   duration: 1,
@@ -156,21 +156,4 @@ gsap.from('.panel-ai .text', {
     trigger: '.panel-cta',
     start: 'top 80%'
   }
-});
-
-gsap.from('.panel-contact .inner', {
-  opacity: 0,
-  y: 50,
-  duration: 1,
-  scrollTrigger: {
-    trigger: '.panel-contact',
-    start: 'top 80%'
-  }
-});
-
-ScrollTrigger.create({
-  trigger: '.panel-contact',
-  start: 'top bottom',
-  pin: true,
-  pinSpacing: false
 });
