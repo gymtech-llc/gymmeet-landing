@@ -158,8 +158,18 @@ gsap.from('.panel-ai .text', {
   }
 });
 
+gsap.from('.panel-contact .inner', {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  scrollTrigger: {
+    trigger: '.panel-contact',
+    start: 'top 80%'
+  }
+});
+
 ScrollTrigger.create({
-  trigger: '.panel-cta',
+  trigger: '.panel-contact',
   start: 'top bottom',
   pin: true,
   pinSpacing: false
