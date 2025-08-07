@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule a Demo - GymMeet Pro</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    body {
+      text-align: center;
+      padding: 2rem;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 0.75rem;
+      background: #446AFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #3654c0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Request a Demo</h1>
+  <form id="demo-form">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <textarea id="message" placeholder="Tell us about your team" rows="4"></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+
+  <script>
+    document.getElementById('demo-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const subject = encodeURIComponent('demo of GymMeet Pro!');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      window.location.href = `mailto:hello@gymmeet.pro?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
+
