@@ -75,6 +75,14 @@ body {
   text-align: center;
 }
 
+.panel-contact {
+  background: transparent;
+}
+
+.panel-contact .inner {
+  text-align: center;
+}
+
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
