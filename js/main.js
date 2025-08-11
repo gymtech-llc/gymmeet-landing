@@ -261,4 +261,62 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Lightbox functionality
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const lightboxBackdrop = document.querySelector('.lightbox-backdrop');
+  
+  // Function to open lightbox
+  function openLightbox(imageSrc, imageAlt) {
+    lightboxImage.src = imageSrc;
+    lightboxImage.alt = imageAlt;
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+  
+  // Function to close lightbox
+  function closeLightbox() {
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+    // Clear image after animation completes
+    setTimeout(() => {
+      if (!lightboxModal.classList.contains('active')) {
+        lightboxImage.src = '';
+        lightboxImage.alt = '';
+      }
+    }, 300);
+  }
+  
+  // Add click event to all screenshot images
+  document.querySelectorAll('.panel .image img').forEach(img => {
+    img.addEventListener('click', function() {
+      openLightbox(this.src, this.alt);
+    });
+  });
+  
+  // Add click event to hero screenshot
+  const heroScreenshot = document.querySelector('.hero-screenshot');
+  if (heroScreenshot) {
+    heroScreenshot.addEventListener('click', function() {
+      openLightbox(this.src, this.alt);
+    });
+  }
+  
+  // Close lightbox events
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxBackdrop.addEventListener('click', closeLightbox);
+  
+  // Close on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+  
+  // Prevent closing when clicking on the image itself
+  lightboxImage.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
 });
