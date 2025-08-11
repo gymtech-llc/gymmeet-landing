@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>GymMeet Pro — Coming Soon</title>
+  <title>GymMeet Pro — Modern Gymnastics Meet Management</title>
+  <meta name="description" content="Streamline gymnastics meet management with automated registration, billing, and compliant multi-channel communication. Built for directors, coaches, and parents.">
+  <meta property="og:title" content="GymMeet Pro — Modern Gymnastics Meet Management">
+  <meta property="og:description" content="Streamline gymnastics meet management with automated registration, billing, and compliant multi-channel communication.">
+  <meta property="og:image" content="https://gymmeet.pro/gymmeet-silhouette.svg">
+  <meta property="og:url" content="https://gymmeet.pro">
+  <meta name="twitter:card" content="summary_large_image">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
       :root {
@@ -11,118 +17,196 @@
         --heading-color: #fff;
         --text-color: #f0f0f0;
       }
-
-    .container {
-      padding: 2rem;
-      max-width: 600px;
-    }
-
-    .logo {
-      width: 50%;
-      max-width: 240px;
-      height: auto;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: var(--heading-color);
-      margin-bottom: 0.75rem;
-    }
-
-    p {
-      font-size: 1.25rem;
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.4);
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .logo {
-        width: 60%;
-      }
-    }
-  </style>
+    </style>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="gymmeet-silhouette.svg" alt="GymMeet Pro" class="nav-logo" />
+        <span class="brand-name">GymMeet Pro</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#communication" class="nav-link">Communication</a>
+        <a href="#statistics" class="nav-link">Platform</a>
+        <a href="#demo" class="nav-link cta-nav">Schedule Demo</a>
+      </div>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
   <section class="hero">
     <div class="container">
-      <img src="gymmeet-silhouette.svg" alt="GymMeet Pro Logo" class="logo" />
-      <h1>GymMeet Pro</h1>
-      <p>The modern platform for managing gymnastics meets — built for directors, coaches, and parents. Launching soon.</p>
-    </div>
-  </section>
-
-  <section class="panel panel-setup">
-    <div class="content">
-      <div class="text">
-        <h2>Set Up Meets in Minutes</h2>
-        <p>Directors can quickly create meet listings, set deadlines, define levels, and customize fees — all from a single screen. No spreadsheets, no confusion.</p>
+      <div class="hero-content">
+        <h1>The Modern Platform for<br><span class="highlight">Gymnastics Meet Management</span></h1>
+        <p class="hero-description">Built for directors, coaches, and parents. Streamline registrations, automate billing, and communicate with families — all in one powerful platform.</p>
+        <div class="hero-actions">
+          <a href="/demo/" class="btn-primary">Schedule a Demo</a>
+          <a href="#features" class="btn-secondary">Learn More</a>
+        </div>
       </div>
-      <div class="image">
-        <img src="screenshots/meet_details.png" alt="Meet setup screen" loading="lazy" />
+      <div class="hero-image">
+        <img src="screenshots/parent_landing.png" alt="GymMeet Pro Dashboard" class="hero-screenshot" />
       </div>
     </div>
   </section>
 
-  <section class="panel panel-parent">
-    <div class="content">
-      <div class="image">
-        <img src="screenshots/parent_registration.png" alt="Parent registration" loading="lazy" />
-      </div>
-      <div class="text">
-        <h2>Simple Registration for Parents</h2>
-        <p>Parents register their athletes in just a few clicks. Fees are calculated automatically, and dashboards show which meets are available or already confirmed.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel panel-roster">
-    <div class="content">
-      <div class="text">
-        <h2>Live Roster Updates</h2>
-        <p>Coaches and admins can view real-time rosters, download PDFs, and notify hosts — no more chasing updates before deadlines.</p>
-      </div>
-      <div class="image">
-        <img src="screenshots/meet_roster_august_invite.png" alt="Meet roster" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <section class="panel panel-billing">
-    <div class="content">
-      <div class="image">
-        <img src="screenshots/billing_invoice.png" alt="Billing invoice" loading="lazy" />
-      </div>
-      <div class="text">
-        <h2>Automated Billing</h2>
-        <p>Generate invoices for each meet, track payment status, and export for your accounting system. Parents and admins both stay in sync.</p>
+  <!-- Statistics Section -->
+  <section id="statistics" class="panel panel-stats">
+    <div class="container">
+      <h2>Trusted by Gymnastics Communities</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Active Athletes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Active Meets</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Gymnastics Teams</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">709ms</div>
+          <div class="stat-label">Avg Response Time</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="panel panel-notifications">
-    <div class="content">
-      <div class="text">
-        <h2>Reach Families Instantly</h2>
-        <p>Built-in email and SMS tools let you share meet info, updates, and reminders. Custom templates make every message feel personal.</p>
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything You Need to Manage Meets</h2>
+        <p>From registration to billing, GymMeet Pro handles every aspect of gymnastics meet management.</p>
       </div>
-      <div class="image">
-        <img src="screenshots/notification_template_preview.png" alt="Notification template" loading="lazy" />
+    </div>
+
+    <div class="panel panel-setup">
+      <div class="content">
+        <div class="text">
+          <h3>Set Up Meets in Minutes</h3>
+          <p>Directors can quickly create meet listings, set deadlines, define levels, and customize fees — all from a single screen. No spreadsheets, no confusion.</p>
+        </div>
+        <div class="image">
+          <div class="device-mockup desktop">
+            <img src="screenshots/meet_details.png" alt="Meet setup screen" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-parent">
+      <div class="content">
+        <div class="image">
+          <div class="device-mockup desktop">
+            <img src="screenshots/available_meets.png" alt="Available meets for registration" loading="lazy" />
+          </div>
+        </div>
+        <div class="text">
+          <h3>Simple Registration for Parents</h3>
+          <p>Parents register their athletes in just a few clicks. Fees are calculated automatically, and dashboards show which meets are available or already confirmed.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-roster">
+      <div class="content">
+        <div class="text">
+          <h3>Live Meet Calendar & Scheduling</h3>
+          <p>Coaches and admins can view real-time schedules, track deadlines, and manage meet logistics — no more chasing updates before deadlines.</p>
+        </div>
+        <div class="image">
+          <div class="device-mockup desktop">
+            <img src="screenshots/meet_calendar.png" alt="Meet calendar and scheduling" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-billing">
+      <div class="content">
+        <div class="image">
+          <div class="device-mockup desktop">
+            <img src="screenshots/billing_invoice.png" alt="Billing invoice" loading="lazy" />
+          </div>
+        </div>
+        <div class="text">
+          <h3>Automated Billing</h3>
+          <p>Generate invoices for each meet, track payment status, and export for your accounting system. Parents and admins both stay in sync.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Communication Section -->
+  <section id="communication" class="communication-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Smart Communication System</h2>
+        <p>Reach families through their preferred channels with personalized, compliant messaging.</p>
+      </div>
+      
+      <div class="panel panel-notifications">
+        <div class="content">
+          <div class="text">
+            <h3>Multi-Channel Notifications</h3>
+            <p>Built-in email and SMS tools let you share meet info, updates, and reminders. Custom templates make every message feel personal.</p>
+            <div class="feature-highlights">
+              <div class="highlight">✓ Professional email templates</div>
+              <div class="highlight">✓ SMS with verified phone numbers</div>
+              <div class="highlight">✓ Push notifications</div>
+            </div>
+          </div>
+          <div class="image">
+            <div class="device-mockup desktop">
+              <img src="screenshots/notification_template_preview.png" alt="Notification template" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMS Compliance Section -->
+      <div class="panel panel-sms-compliance">
+        <div class="content">
+          <div class="image">
+            <div class="device-mockup desktop">
+              <img src="screenshots/notification_preferences_desktop.png" alt="Communication preferences" loading="lazy" />
+            </div>
+          </div>
+          <div class="text">
+            <h3>Compliant Communication Preferences</h3>
+            <p>Every user has complete control over how and when they receive messages. Our system ensures full compliance with telecommunications regulations.</p>
+            <div class="compliance-features">
+              <div class="compliance-item">
+                <strong>Phone Verification Required</strong><br>
+                Users must verify their phone numbers before receiving SMS messages
+              </div>
+              <div class="compliance-item">
+                <strong>Granular Opt-In Controls</strong><br>
+                Separate preferences for account notifications, meet updates, and team communications
+              </div>
+              <div class="compliance-item">
+                <strong>Easy Opt-Out Process</strong><br>
+                Users can disable SMS notifications instantly through their preference dashboard
+              </div>
+              <div class="compliance-item">
+                <strong>Template-Based Messaging</strong><br>
+                All SMS messages use approved templates with consistent, professional content
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -130,19 +214,25 @@
   <section class="panel panel-ai">
     <div class="content">
       <div class="image">
-        <img src="screenshots/ai_assistant_mobile.png" alt="AI assistant mobile" loading="lazy" />
+        <div class="device-mockup mobile">
+          <img src="screenshots/ai_assistant_mobile.png" alt="AI assistant mobile" loading="lazy" />
+        </div>
       </div>
       <div class="text">
-        <h2>Meet Your AI Assistant</h2>
-        <p>Our built-in assistant understands natural language. Ask questions, register athletes, extract info from flyers — it’s like having a meet manager in your pocket.</p>
+        <h3>Meet Your AI Assistant</h3>
+        <p>Our built-in assistant understands natural language. Ask questions, register athletes, extract info from flyers — it's like having a meet manager in your pocket.</p>
       </div>
     </div>
   </section>
 
-  <section class="panel panel-cta">
+  <section id="demo" class="panel panel-cta">
     <div class="inner">
       <h2>Ready to Simplify Your Season?</h2>
-      <a href="/demo/" class="cta-button" aria-label="Schedule a demo">Schedule a Demo</a>
+      <p>Join gymnastics programs already using GymMeet Pro to streamline their operations.</p>
+      <div class="cta-actions">
+        <a href="/demo/" class="btn-primary large" aria-label="Schedule a demo">Schedule a Demo</a>
+        <a href="mailto:hello@gymmeet.pro" class="btn-secondary large">Contact Us</a>
+      </div>
     </div>
   </section>
 
