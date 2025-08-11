@@ -39,18 +39,6 @@ gsap.timeline()
     ease: 'power2.out'
   }, '-=0.8');
 
-// Stats animation
-gsap.from('.stat-card', {
-  y: 50,
-  opacity: 0,
-  duration: 0.8,
-  stagger: 0.1,
-  ease: 'back.out(1.7)',
-  scrollTrigger: {
-    trigger: '.stats-grid',
-    start: 'top 80%'
-  }
-});
 
 // Features section animations
 gsap.from('.panel-setup .image', {

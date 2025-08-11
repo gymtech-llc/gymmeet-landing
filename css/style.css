@@ -151,10 +151,7 @@ html {
 }
 
 .highlight {
-  background: linear-gradient(135deg, #8622FF, #446AFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
 }
 
 .hero-description {
@@ -218,52 +215,6 @@ html {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Statistics Section */
-.panel-stats {
-  padding: 6rem 0;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-}
-
-.panel-stats h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #fff;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.stat-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-}
-
-.stat-number {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 1rem;
-  color: #f0f0f0;
-  margin-top: 0.5rem;
-}
 
 /* Section Headers */
 .features-section, .communication-section {
@@ -362,58 +313,11 @@ html {
   position: relative;
 }
 
-/* Device Mockups */
-.device-mockup {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.device-mockup.desktop {
-  background: #1a1a1a;
-  padding: 2rem 2rem 1rem;
-  border: 1px solid #333;
-}
-
-.device-mockup.desktop::before {
-  content: '';
-  position: absolute;
-  top: 0.75rem;
-  left: 1rem;
-  width: 12px;
-  height: 12px;
-  background: #ff5f56;
-  border-radius: 50%;
-  box-shadow: 18px 0 #ffbd2e, 36px 0 #27ca3f;
-}
-
-.device-mockup.mobile {
-  background: #000;
-  padding: 3rem 1rem 2rem;
-  border-radius: 25px;
-  border: 2px solid #333;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.device-mockup.mobile::before {
-  content: '';
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 4px;
-  background: #333;
-  border-radius: 2px;
-}
-
-.device-mockup img {
+.panel .image img {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* CTA Section */
@@ -511,9 +415,6 @@ html {
     text-align: center;
   }
   
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   
   .section-header h2 {
     font-size: 2rem;
